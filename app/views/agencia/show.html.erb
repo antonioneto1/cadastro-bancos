@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Agencia:</strong>
+  <%= @agencium.agencia %>
+</p>
+
+<p>
+  <strong>Numero conta:</strong>
+  <%= @agencium.numero_conta %>
+</p>
+
+<p>
+  <strong>Limite:</strong>
+  <%= @agencium.limite %>
+</p>
+
+<%= link_to 'Edit', edit_agencium_path(@agencium) %> |
+<%= link_to 'Back', agencia_path %>
