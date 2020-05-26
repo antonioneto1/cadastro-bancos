@@ -1,3 +1,3 @@
 class Agencium < ApplicationRecord
-  belongs_to :bank
+  belongs_to :bank, :optional => true
 end

@@ -25,7 +25,7 @@ class AgenciaController < ApplicationController
   # POST /agencia.json
   def create
     @agencium = Agencium.new(agencium_params)
-
+    # @g = Guitar.new(guitar_params.merge(user_id: current_user.id))
     respond_to do |format|
       if @agencium.save
         format.html { redirect_to @agencium, notice: 'Agencium was successfully created.' }
