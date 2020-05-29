@@ -1,42 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
+puts "Cadastrando os Bancos"
+Agency.create!([
+{ agency_number: '9999', endereco: 'av Central'},
+{ agency_number: '0000',  endereco: 'av Central'},
+{ agency_number: '1111', endereco: 'av Central'}
+])
+puts "Bancos Cadastrados"
 
-Bank.create!(
-  agencia: '9999',
-  endereco: 'av Central',
-
-)
-Bank.create!(
-  agencia: '0000',
-  endereco: 'av Central',
-
-)
-Bank.create!(
-  agencia: '1111',
-  endereco: 'av Central',
-
-)
-Agencium.create!(
-  # agencia_id: '9999',
-  numero_conta: '666-6',
-  limite: 1000,
-
-)
-Agencium.create!(
-  # agencia_id: '9999',
-  numero_conta: '6987-1',
-  limite: 1000,
-
-)
-Agencium.create!(
-  # agencia_id: '0000',
-  numero_conta: '999-1',
-  limite: 1000,
-
-)
+puts "Cadastrando as Agencias"
+BankAccount.create!([
+{ agency_id: '1', account_number: '666-6',limit: 1000},
+{ agency_id: '2', account_number: '6987-1', limit: 1000}, 
+{ agency_id: '3',  account_number: '999-1',limit: 1000}
+])
+puts "Agencias Cadastradas"

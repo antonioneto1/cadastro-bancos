@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numero da Agencia:</strong>
+  <%= @agency.agency_number %>
+</p>
+
+<p>
+  <strong>Endereço:</strong>
+  <%= @agency.endereco %>
+</p>
+
+<%= link_to 'Editar', edit_agency_path(@agency) %> |
+<%= link_to 'Voltar', agencies_path %>
+<%= link_to 'Cadastraruma Conta para este Banco', new_bank_account_path %>

@@ -10,26 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200525102435) do
+ActiveRecord::Schema.define(version: 20200528202701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "agencia", force: :cascade do |t|
-    t.bigint "agencia_id"
-    t.string "numero_conta"
-    t.decimal "limite"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["agencia_id"], name: "index_agencia_on_agencia_id"
-  end
-
-  create_table "banks", force: :cascade do |t|
-    t.string "agencia"
+  create_table "agencies", force: :cascade do |t|
+    t.string "agency_number"
     t.text "endereco"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "agencia", "banks", column: "agencia_id"
+  create_table "bank_accounts", force: :cascade do |t|
+    t.integer "agency_id"
+    t.string "account_number"
+    t.decimal "limit"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
