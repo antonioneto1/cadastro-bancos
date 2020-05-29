@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Agencias Bancarias</h1>
-<p> <%= t('language') %> <strong><%= locale(I18n.locale) %></strong> </p>
+<h1><%= t('agencies') %></h1>
+<p> <%= t('language') %> <strong><%= locale %></strong> </p>
 <p><strong>Data: <%= I18n.l(Date.today) %> </strong></p>
 <p><%= t('agencies') %> </p>
 
 <table>
   <thead>
     <tr>
-      <th>Agency number</th>
-      <th>Endereco</th>
+      <th><%= t('agency_nu') %></th>
+      <th><%= t('address') %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Agency', new_agency_path %>
+<%= link_to t("New Agency"), new_agency_path %>

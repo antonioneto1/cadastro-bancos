@@ -2,6 +2,7 @@ pt-BR:
 #estaticos e nomes de paginas
   agencies: "Agencias Bancarias"
   New Agency: "Nova Agencia"
+  editing_agency: "Editar Agencia"
   language: "O indioma usado nessa aplicação é:"
 #confirmações
   confirmation: "Você tem certeza?"
@@ -13,6 +14,8 @@ pt-BR:
     delete: "Apagar"
     back: "Voltar"
 
+  agency_nu: "Numero da Agencia"
+  address: "Endereço"
   
   
   

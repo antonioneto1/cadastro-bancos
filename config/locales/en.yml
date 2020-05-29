@@ -1,11 +1,19 @@
 en:
-  Agencies: "Agencies"
+#Bank Agencies
+  agencies: "Bank Agencies"
   New Agency: "New Agency"
+  editing_agency: "Editing Agency"
   language: "The language used in this application is:"
 
   confirmation: "Are you sure?"
+
   links:
     edit: "Edit"
     show: "Show"
     delete: "Delete"
     back: "Back"
+
+  agency_nu: "Agency Number"
+  address: "Address"
+
+  
