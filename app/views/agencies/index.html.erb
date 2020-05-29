@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Agencies</h1>
+<h1>Agencias Bancarias</h1>
+<p> <%= t('language') %> <strong><%= locale(I18n.locale) %></strong> </p>
+<p><strong>Data: <%= I18n.l(Date.today) %> </strong></p>
+<p><%= t('agencies') %> </p>
 
 <table>
   <thead>
@@ -16,9 +19,9 @@
       <tr>
         <td><%= agency.agency_number %></td>
         <td><%= agency.endereco %></td>
-        <td><%= link_to 'Show', agency %></td>
-        <td><%= link_to 'Edit', edit_agency_path(agency) %></td>
-        <td><%= link_to 'Destroy', agency, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('links.show'), agency %></td>
+        <td><%= link_to t('links.edit'), edit_agency_path(agency) %></td>
+        <td><%= link_to t('links.delete'), agency, method: :delete, data: { confirm: t('confirmation') } %></td>
       </tr>
     <% end %>
   </tbody>

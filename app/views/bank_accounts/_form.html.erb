@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :agency_id %>
-    <%= form.select("agency_id",Agency.all.collect{|a| [a.agency_number,a.id]},{include_blank: 'Selecione uma Agencia'} ) %>
+    <%= form.select("agency_id",@agency_number_options, {include_blank: 'Selecione uma Agencia'}) %>
   </div>
 
   <div class="field">
