@@ -6,9 +6,23 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <ul class="nav">
+      <li class="nav-item">
+        <%= link_to 'Portugês', root_path(locale: 'pt-BR'), class:"nav-link active" %>
+     </li>
+     <li class="nav-item">
+       <%= link_to 'Inglês', root_path(locale: 'en'), class:"nav-link active" %>
+     </li>
+    </ul>
   </head>
 
   <body>
+  <div class="container-fluid">
     <%= yield %>
+
+  </div>
   </body>
+  <footer>
+  <span>Antonio C neto 2020 para sua Empresa</span>
+  </footer>
 </html>

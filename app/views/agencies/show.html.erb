@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="lead">
   <strong><%= t('agency_nu') %></strong>
   <%= @agency.agency_number %>
 </p>
 
-<p>
+<p class="lead">
   <strong><%= t('address') %></strong>
   <%= @agency.endereco %>
-</p>
+</p class="lead">
 
-<%= link_to t('links.edit'), edit_agency_path(@agency) %> |
-<%= link_to t('links.back'), agencies_path %>
-<%= link_to 'Cadastraruma Conta para este Banco', new_bank_account_path %>
+<%= link_to t('links.edit'), edit_agency_path(@agency) ,class:"btn btn-primary"%> 
+<%= link_to t('links.back'), agencies_path ,class:"btn btn-primary"%>
+

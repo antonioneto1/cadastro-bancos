@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="lead">
   <strong>Agency:</strong>
   <%= @bank_account.agency_id %>
 </p>
 
-<p>
+<p class="lead">
   <strong>Account number:</strong>
   <%= @bank_account.account_number %>
 </p>
 
-<p>
+<p class="lead">
   <strong>Limit:</strong>
   <%= @bank_account.limit %>
 </p>
 
-<%= link_to 'Edit', edit_bank_account_path(@bank_account) %> |
-<%= link_to 'Back', bank_accounts_path %>
+<%= link_to 'Edit', edit_bank_account_path(@bank_account) ,class:"btn btn-primary"%>
+<%= link_to 'Back', bank_accounts_path ,class:"btn btn-primary"%>

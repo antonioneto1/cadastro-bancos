@@ -3,25 +3,26 @@
     <div id="error_explanation">
       <h2><%= pluralize(agency.errors.count, "error") %> prohibited this agency from being saved:</h2>
 
-      <ul>
+      <ul class="list-group"  >
       <% agency.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li class="list-group-item list-group-item-danger"><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label t('agency_nu') %>
-    <%= form.text_field :agency_number, id: :agency_agency_number %>
+  <div class="field form-group">
+    <%= form.label t('agency_nu') ,class:"form-check-label"%>
+    <%= form.text_field :agency_number, id: :agency_agency_number ,class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label t('address')  %>
-    <%= form.text_area :endereco, id: :agency_endereco %>
+  <div class="field form-group">
+    <%= form.label t('address') ,class:"form-check-label" %>
+    <%= form.text_area :endereco, id: :agency_endereco ,class:"form-control"%>
   </div>
 
-  <div class="actions">
+  <div class="actions form-group">
     <%= form.submit %>
   </div>
 <% end %>
+</form>
