@@ -1,11 +1,14 @@
+
 <p id="notice"><%= notice %></p>
+<p><%= link_to 'Portugês', root_path(locale: 'pt-BR')%></p>
+<p><%= link_to 'Inglês', root_path(locale: 'en')%></p>
 
 <h1><%= t('agencies') %></h1>
 <p> <%= t('language') %> <strong><%= locale %></strong> </p>
 <p><strong>Data: <%= I18n.l(Date.today) %> </strong></p>
 <p><%= t('agencies') %> </p>
 
-<table>
+<table class="table table-dark">
   <thead>
     <tr>
       <th><%= t('agency_nu') %></th>
