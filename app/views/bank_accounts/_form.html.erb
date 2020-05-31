@@ -12,20 +12,22 @@
   <% end %>
 
   <div class="field form-group">
-    <%= form.label :agency_id ,class:"form-check-label"%>
-    <%= form.select("agency_id",@agency_number_options, {include_blank: 'Selecione uma Agencia'}) %>
+    <%= form.label t("Agency") ,class:"form-check-label"%>
+    <%= form.select("agency_id",@agency_number_options, {include_blank: t('Select an Agency')}) %>
   </div>
 
   <div class="field form-group">
-    <%= form.label :account_number ,class:"form-check-label"%>
+    <%= form.label t("Account number") ,class:"form-check-label"%>
     <%= form.text_field :account_number, id: :bank_account_account_number ,class:"form-control"%>
   </div>
 
   <div class="field form-group">
-    <%= form.label :limit ,class:"form-check-label"%>
+    <%= form.label t("Limit") ,class:"form-check-label"%>
     <%= form.text_field :limit, id: :bank_account_limit ,class:"form-control"%>
   </div>
-  <div class="actions">
+  <div class="actions form-check-label field form-group" >
     <%= form.submit %>
+    <br>
   </div>
+  <br>
 <% end %>

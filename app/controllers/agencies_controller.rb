@@ -28,7 +28,7 @@ class AgenciesController < ApplicationController
 
     respond_to do |format|
       if @agency.save
-        format.html { redirect_to @agency, notice: 'Agency was successfully created.' }
+        format.html { redirect_to @agency, notice: t('was successfully created') }
         format.json { render :show, status: :created, location: @agency }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class AgenciesController < ApplicationController
   def update
     respond_to do |format|
       if @agency.update(agency_params)
-        format.html { redirect_to @agency, notice: 'Agency was successfully updated.' }
+        format.html { redirect_to @agency, notice: t('successfully updated') }
         format.json { render :show, status: :ok, location: @agency }
       else
         format.html { render :edit }
@@ -54,10 +54,13 @@ class AgenciesController < ApplicationController
   # DELETE /agencies/1
   # DELETE /agencies/1.json
   def destroy
-    @agency.destroy
     respond_to do |format|
-      format.html { redirect_to agencies_url, notice: 'Agency was successfully destroyed.' }
+    if @agency.destroy
+      format.html { redirect_to agencies_url, notice: t('successfully destroyed') }
       format.json { head :no_content }
+     else
+      format.html { redirect_to agencies_url, notice: t('cannot be destroyed') }
+     end
     end
   end
 

@@ -1,5 +1,5 @@
 class Agency < ApplicationRecord
-  has_many :bank_accounts
+  has_many :bank_accounts, dependent: :restrict_with_error 
 
 
   validates :agency_number, :endereco,presence: true
@@ -7,3 +7,4 @@ class Agency < ApplicationRecord
   validates :agency_number, uniqueness: {message: 'Este numero de agencia já está cadastrado'}
   validates :agency_number, numericality: {message: 'Campo restrito, apenas para numeros'}
 end
+ 

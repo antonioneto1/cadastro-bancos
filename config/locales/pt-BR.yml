@@ -2,10 +2,19 @@ pt-BR:
 #estaticos e nomes de paginas
   agencies: "Agencias Bancarias"
   New Agency: "Nova Agencia"
-  editing_agency: "Editar Agencia"
+  New Bank Account: "Nova Conta Bancaria"
+  Editing Bank Account: "Editar Uma Conta Bancaria"
   language: "O indioma usado nessa aplicação é:"
+  Bank accounts: "Contas Bancarias"
+  Registered Accounts: "Contas Cadastradas"
+  
 #confirmações
+  successfully destroyed: "Destruído com Sucesso"
   confirmation: "Você tem certeza?"
+  successfully updated: "atualizada com sucesso"
+  cannot be destroyed: "Não Pode Ser Destruida, Pois Existem Contas Cadastradas Para Esta Agência"
+  was successfully created: 'foi criado com sucesso'
+
 
 #links e botões
   links:
@@ -13,9 +22,14 @@ pt-BR:
     show: "Detalhes"
     delete: "Apagar"
     back: "Voltar"
-
+#campos de agencia
   agency_nu: "Numero da Agencia"
   address: "Endereço"
-  
-  
+  editing_agency: "Editar Agencia"
+  Select an Agency: "Selecione uma Agencia"
+#campos de conta
+  Agency: "Agecia"
+  Account number: "Numero Da Conta"
+  Limit: "Limite"
+  register a bride account: "Cadastrar Uma Nova Conta"
   

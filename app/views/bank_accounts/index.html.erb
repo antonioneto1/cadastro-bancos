@@ -1,5 +1,5 @@
 <div class="jumbotron">
-<h1 class="display-4">Contas Bancarias</h1>
+<h1 class="display-4"><%= t("Contas Bancarias") %></h1>
 <hr class="my-4">
 <p id="notice"><%= notice %></p>
 <%= link_to 'Cadastrar nova Conta', new_bank_account_path ,class:"btn btn-primary btn-lg",role:"button"%>
@@ -7,33 +7,33 @@
 
 <p id="notice"><%= notice %></p>
 
-<p class="lead">Contas Cadastradas</p>
+<p class="lead"><%= t("Registered Accounts") %></p>
 
 
 <table class="table table-dark">
   <thead>
     <tr>
-      <th>Agency</th>
-      <th>Account number</th>
-      <th>Limit</th>
+      <th><%= t("Agency") %></th>
+      <th><%= t("Account number") %></th>
+      <th><%= t("Limit") %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @bank_accounts.each do |bank_account| %>
+    <% @bank_accounts.each do |bank_account, agency| %>
       <tr>
         <td><%= bank_account.agency_id %></td>
         <td><%= bank_account.account_number %></td>
         <td><%= bank_account.limit %></td>
-        <td><%= link_to 'Detalhes', bank_account %></td>
-        <td><%= link_to 'Editar', edit_bank_account_path(bank_account) %></td>
-        <td><%= link_to 'Excluir', bank_account, method: :delete, data: { confirm: 'Você realmente quer excluir essa Conta?' } %></td>
+        <td><%= link_to t('show'), bank_account %></td>
+        <td><%= link_to t('edit'), edit_bank_account_path(bank_account) %></td>
+        <td><%= link_to t('delete'), bank_account, method: :delete, data: { confirm: t("confirmation") } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<%= link_to t("Voltar"),agencies_path ,class:"btn btn-primary btn-lg",role:"button"  %>
+<%= link_to t("back"),agencies_path ,class:"btn btn-primary btn-lg",role:"button"  %>
 </div>

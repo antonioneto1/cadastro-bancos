@@ -1,6 +1,6 @@
-<h1>t<%= ('editing_agency') %></h1>
+<h1><%= t("editing_agency") %></h1>
 
 <%= render 'form', agency: @agency %>
 
-<%= link_to t('links.show'), @agency %> |
-<%= link_to t('links.back'), agencies_path %>
+<%= link_to t('show'), @agency ,class:"btn btn-primary btn-lg",role:"button" %> 
+<%= link_to t('back'), agencies_path ,class:"btn btn-primary btn-lg",role:"button" %>

@@ -1,19 +1,35 @@
 en:
-#Bank Agencies
+
+#estaticos e nomes de paginas
   agencies: "Bank Agencies"
   New Agency: "New Agency"
-  editing_agency: "Editing Agency"
+  New Bank Account: "New Bank Account"
+  Editing Bank Account: "Editing Bank Account"
   language: "The language used in this application is:"
-
+  Bank accounts: "Bank accounts"
+  Registered Accounts: "Registered Accounts"
+  
+#confirmações
+  successfully destroyed: "successfully destroyed"
   confirmation: "Are you sure?"
-
+  successfully updated: "successfully updated"
+  cannot be destroyed: "Cannot Be Destroyed, As There Are Registered Accounts For This Agency"
+  was successfully created: 'was successfully created'
+#links e botões
   links:
     edit: "Edit"
     show: "Show"
     delete: "Delete"
     back: "Back"
 
+#campos de agencia
   agency_nu: "Agency Number"
   address: "Address"
-
+  editing_agency: "Editar Agencia"
+  Select an Agency: "Select an Agency"
+#campos de conta
+  Agency: "Agency"
+  Account number: "Account Number"
+  Limit: "Limit"
+  register a bride account: "Register A Bride Account"
   
