@@ -13,7 +13,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-//= require jquery
+//= require jquery/dist/jquery
 //= require popper
 //= require bootstrap
 //= require notifyjs/dist/notify.js
