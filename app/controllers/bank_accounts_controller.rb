@@ -1,11 +1,11 @@
 class BankAccountsController < ApplicationController
   before_action :set_bank_account, only: [:show, :edit, :update, :destroy]
   before_action :set_agency_number_options, only:[ :new, :create, :edit, :update]
+  before_action :set_agency_select, only:[ :edit, :update,:show]
   # GET /bank_accounts
   # GET /bank_accounts.json
   def index
     @bank_accounts = BankAccount.all
-    @agencies = Agency.all
   end
 
   # GET /bank_accounts/1
@@ -16,7 +16,6 @@ class BankAccountsController < ApplicationController
   # GET /bank_accounts/new
   def new
     @bank_account = BankAccount.new
-    @agency = Agency.new
   end
 
   # GET /bank_accounts/1/edit
@@ -67,6 +66,8 @@ class BankAccountsController < ApplicationController
     def set_agency_number_options
       @agency_number_options = Agency.all.pluck(:agency_number,:id)
     end
+    def set_agency_select
+    end
 
     # Use callbacks to share common setup or constraints between actions.
     def set_bank_account
@@ -75,7 +76,7 @@ class BankAccountsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def bank_account_params
-      params.require(:bank_account).permit(:agency_id, :account_number, :limit, 
-      agencies: [:agency_number,:id])
+      params.require(:bank_account).permit(:agency_id , :account_number, :limit)
+      
     end
 end

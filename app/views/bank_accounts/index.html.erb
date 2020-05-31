@@ -21,11 +21,12 @@
   </thead>
 
   <tbody>
-    <% @bank_accounts.each do |bank_account, agency| %>
+    <% @bank_accounts.each do |bank_account| %>
       <tr>
-        <td><%= bank_account.agency_id %></td>
+        <td><%= bank_account.agency_id%></td>
         <td><%= bank_account.account_number %></td>
         <td><%= bank_account.limit %></td>
+			  
         <td><%= link_to t('show'), bank_account %></td>
         <td><%= link_to t('edit'), edit_bank_account_path(bank_account) %></td>
         <td><%= link_to t('delete'), bank_account, method: :delete, data: { confirm: t("confirmation") } %></td>
